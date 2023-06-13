@@ -12,6 +12,9 @@
 !/.zfunc/
 /.zfunc/**  # ディレクトリは管理したいけど中身はいらないときはこんな感じ
 !/.zsh/
+!/.zsh/**
+!/.code/
+!/.code/**
 !/.zsh/dircolors
 !/.zsh/rc/
 !/.zsh/rc/**

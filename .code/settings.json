@@ -1,0 +1,166 @@
+{
+  // "editor.acceptSuggestionOnEnter": "off",
+  "explorer.compactFolders": false,
+  "editor.inlineSuggest.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.minimap.enabled": false,
+  "editor.fontSize":12,
+  "editor.wordWrap": "on",
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.profiles.osx": {
+    "zsh": {
+      "path": "/usr/local/bin/zsh",
+    }
+  },
+  "terminal.integrated.fontSize": 12,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "diffEditor.renderSideBySide": true,
+  "editor.detectIndentation": false, // インデントの強制置換
+  "editor.tabSize": 2, //default
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  // ** 各言語毎の設定 **
+  "[go]": {
+    "editor.tabSize": 2, // 公式のサイズは不明。2か4
+    "editor.insertSpaces": false, // Go公式はスペースでなくタブ
+    "editor.formatOnSave": true, // ファイル保存時にフォーマット
+    "editor.defaultFormatter": "golang.go" // 変える
+  },
+  "[javascript]": {
+    // * 以下はワークスペース毎に設定すること *
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // "editor.formatOnPaste": true,
+    // "editor.formatOnSave": false,
+    // "editor.formatOnType": true,
+    // "editor.codeActionsOnSave": ["source.organizeImports", "source.fixAll.eslint"],
+    // "cSpell.words": []
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    // * 以下はワークスペース毎に設定すること *
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // "editor.formatOnPaste": true,
+    // "editor.formatOnSave": false,
+    // "editor.formatOnType": true,
+    // "editor.codeActionsOnSave": ["source.organizeImports", "source.fixAll.eslint"],
+    // "cSpell.words": []
+  },
+  "[python]": {
+    "editor.tabSize": 4,
+  },
+  // * 以下はワークスペース毎に設定すること *
+  // "python.linting.enabled": true,
+  // "python.linting.pylintEnabled": false,
+  // "python.linting.pycodestyleEnabled": false,
+  // "python.linting.flake8Enabled": true,
+  // "python.formatting.provider": "autopep8",
+  // "python.languageServer": "Pylance",
+  // "python.venvFolders": [
+  //   "envs",
+  //   ".pyenv",
+  //   ".direnv",
+  //   ".env"
+  // ],
+  "[php]": {
+    "editor.tabSize": 4,
+    // * 以下はワークスペース毎に設定 *
+    // "editor.defaultFormatter": "persoderlind.vscode-phpcbf",
+  },
+  // * 以下はワークスペース毎に設定すること *
+  // * PHP共通
+  // "phpcs.executablePath": "/usr/local/bin/phpcs",
+  // "php.suggest.basic": false,
+  // "php.validate.executablePath": "/Users/toda/.anyenv/envs/phpenv/shims/php",
+  // "php.validate.run": "onType",
+	// "php.validate.enable": false,
+	// * WordPress
+	// "phpcs.standard": "WordPress",
+  // "editor.insertSpaces": false,
+  // * PHPCBF
+  // "phpcbf.executablePath": "/usr/local/bin/phpcbf",
+  // "phpcbf.enable": true,
+	// "phpcbf.standard": "WordPress",
+  // * Laravel
+  // "intelephense.diagnostics.undefinedClassConstants": false,
+  // "intelephense.diagnostics.undefinedConstants": false,
+  // "intelephense.diagnostics.undefinedFunctions": false,
+  // "intelephense.diagnostics.undefinedMethods": false,
+  // "intelephense.diagnostics.undefinedProperties": false,
+  // "intelephense.diagnostics.undefinedTypes": false,
+  "[yaml]": {
+    "editor.tabSize": 2
+  },
+  "indentRainbow.indentSetter": {
+    "[javascript]": 2,
+    "[typescript]": 2,
+    "[ruby]": 2,
+    "[php]": 4,
+    "[python]": 4,
+    "[go]": 2,
+  },
+  "yaml.schemas": {
+    "https://d33vqc0rt9ld30.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json": [
+        "*.cf.yaml",
+        "*.cf.yml",
+        "cloud*formation/*.yaml",
+        "cloud*formation/*.yml"
+    ]
+  },
+  "yaml.customTags": [
+    "!Ref",
+    "!Sub",
+    "!Join sequence",
+    "!FindInMap sequence",
+    "!GetAtt scalar sequence",
+    "!Base64 mapping",
+    "!GetAZs",
+    "!Select sequence",
+    "!Split sequence",
+    "!ImportValue",
+    "!Condition",
+    "!Equals sequence",
+    "!And",
+    "!If",
+    "!Not",
+    "!Or",
+    "!And sequence",
+    "!If sequence",
+    "!Not sequence",
+    "!Equals",
+    "!Or sequence",
+    "!FindInMap",
+    "!Base64",
+    "!Join",
+    "!Cidr",
+    "!Sub sequence",
+    "!GetAtt",
+    "!ImportValue sequence",
+    "!Select",
+    "!Split"
+  ],
+  // ** 拡張機能設定 **
+  "liveServer.settings.port": 8100,
+  "liveServer.settings.host": "localhost",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "Dracula",
+  // ** 拡張機能設定(Vim用) **
+  "vim.statusBarColorControl": false,
+  "vim.useSystemClipboard": true, // clipboardにコピーする
+  "vim.hlsearch": true,
+  "vim.easymotion": true,
+  "vim.ignorecase": true, // 検索時に大文字小文字を無視する
+  "vim.incsearch": true,
+  "vim.camelCaseMotion.enable": true,
+  "vim.visualstar": true, // カーソル上にあるワードを"*"で検索
+  "vim.useCtrlKeys": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": true,
+    "markdown": true
+  },
+  "go.formatTool": "gofmt",
+  "window.zoomLevel": -1, // Ctrlキーを使った操作の有効化
+}
