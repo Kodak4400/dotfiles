@@ -162,5 +162,5 @@
     "markdown": true
   },
   "go.formatTool": "gofmt",
-  "window.zoomLevel": -1, // Ctrlキーを使った操作の有効化
+  "window.zoomLevel": 1 // Ctrlキーを使った操作の有効化
 }
