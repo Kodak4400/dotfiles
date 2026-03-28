@@ -12,6 +12,8 @@
 !/p10k/
 !/ws-code/
 !/ws-code/**
+!/ws-cursor/
+!/ws-cursor/**
 !/.zshrc
 !/.zshenv
 !/.zfunc/
