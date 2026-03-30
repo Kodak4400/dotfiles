@@ -13,6 +13,7 @@ alwaysApply: true
 | planner | 実装計画の立案 | 複雑な機能追加・リファクタリング |
 | tdd-guide | テスト駆動開発 | 新機能追加・バグ修正 |
 | code-reviewer | コードレビュー | コードを書いた直後 |
+| security-reviewer | セキュリティレビュー | コミット前 |
 
 ## エージェントの即時起動
 

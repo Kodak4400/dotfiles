@@ -12,6 +12,7 @@ applyTo: '**'
 | ko.planner | 実装計画の立案 | 複雑な機能追加・リファクタリング |
 | ko.tdd-guide | テスト駆動開発 | 新機能追加・バグ修正 |
 | ko.code-reviewer | コードレビュー | コードを書いた直後 |
+| ko.security-reviewer | セキュリティレビュー | コミット前 |
 
 ## エージェントの即時起動
 
