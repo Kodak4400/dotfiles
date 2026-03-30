@@ -1,32 +1,32 @@
 ---
 applyTo: '**'
 ---
-# Security Guidelines
+# セキュリティガイドライン
 
-## Mandatory Security Checks
+## コミット前の必須セキュリティチェック
 
-Before ANY commit:
-- [ ] No hardcoded secrets (API keys, passwords, tokens)
-- [ ] All user inputs validated
-- [ ] SQL injection prevention (parameterized queries)
-- [ ] XSS prevention (sanitized HTML)
-- [ ] CSRF protection enabled
-- [ ] Authentication/authorization verified
-- [ ] Rate limiting on all endpoints
-- [ ] Error messages don't leak sensitive data
+すべてのコミット前に確認すること:
+- [ ] シークレットのハードコードがない（APIキー、パスワード、トークン）
+- [ ] すべてのユーザー入力がバリデーションされている
+- [ ] SQLインジェクション対策がされている（パラメータ化クエリを使用）
+- [ ] XSS対策がされている（HTMLがサニタイズされている）
+- [ ] CSRF対策が有効になっている
+- [ ] 認証・認可が正しく実装されている
+- [ ] すべてのエンドポイントにレートリミットが設定されている
+- [ ] エラーメッセージが機密情報を漏洩していない
 
-## Secret Management
+## シークレット管理
 
-- NEVER hardcode secrets in source code
-- ALWAYS use environment variables or a secret manager
-- Validate that required secrets are present at startup
-- Rotate any secrets that may have been exposed
+- ソースコードにシークレットをハードコードしない
+- 環境変数またはシークレットマネージャーを必ず使用する
+- 起動時に必要なシークレットが存在するかバリデーションする
+- 漏洩した可能性があるシークレットは即座にローテーションする
 
-## Security Response Protocol
+## セキュリティインシデント対応
 
-If security issue found:
-1. STOP immediately
-2. Use **security-reviewer** agent
-3. Fix CRITICAL issues before continuing
-4. Rotate any exposed secrets
-5. Review entire codebase for similar issues
+セキュリティ上の問題を発見した場合:
+1. 直ちに作業を停止する
+2. **ko.security-reviewer** エージェントを使用する
+3. CRITICAL の問題を修正してから作業を再開する
+4. 漏洩したシークレットをローテーションする
+5. コードベース全体で同様の問題がないか確認する

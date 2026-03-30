@@ -1,30 +1,30 @@
 ---
 applyTo: '**'
 ---
-# Agent Orchestration
+# エージェントオーケストレーション
 
-## Available Agents
+## 利用可能なエージェント
 
-Located in `~/.github/agents/`:
+`~/.github/agents/` に配置:
 
-| Agent | Purpose | When to Use |
-|-------|---------|-------------|
-| planner | Implementation planning | Complex features, refactoring |
-| tdd-guide | Test-driven development | New features, bug fixes |
-| code-reviewer | Code review | After writing code |
+| エージェント | 目的 | 使用タイミング |
+|-------------|------|--------------|
+| ko.planner | 実装計画の立案 | 複雑な機能追加・リファクタリング |
+| ko.tdd-guide | テスト駆動開発 | 新機能追加・バグ修正 |
+| ko.code-reviewer | コードレビュー | コードを書いた直後 |
 
-## Immediate Agent Usage
+## エージェントの即時起動
 
-No user prompt needed:
-1. Complex feature requests - Use **planner** agent
-2. Code just written/modified - Use **code-reviewer** agent
-3. Bug fix or new feature - Use **tdd-guide** agent
+ユーザーの指示を待たず、以下の状況では自律的にエージェントを起動すること:
+1. 複雑な機能要求 → **ko.planner** エージェントを使用
+2. コードを書いた・修正した直後 → **ko.code-reviewer** エージェントを使用
+3. バグ修正・新機能追加 → **ko.tdd-guide** エージェントを使用
 
-## Multi-Perspective Analysis
+## 多角的分析
 
-For complex problems, use split role sub-agents:
-- Factual reviewer
-- Senior engineer
-- Security expert
-- Consistency reviewer
-- Redundancy checker
+複雑な問題には、役割を分けたサブエージェントを活用する:
+- 事実確認レビュアー
+- シニアエンジニア
+- セキュリティエキスパート
+- 一貫性レビュアー
+- 冗長性チェッカー

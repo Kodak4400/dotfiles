@@ -1,32 +1,32 @@
 ---
 applyTo: '**'
 ---
-# Development Workflow
+# 開発ワークフロー
 
-> This rule extends the git workflow rule with the full feature development process that happens before git operations.
+> このルールは、git ワークフロールールを拡張し、git 操作の前に行う機能開発プロセス全体を定義する。
 
-The Feature Implementation Workflow describes the development pipeline: planning, TDD, code review, and then committing to git.
+フィーチャー実装ワークフローは、計画・TDD・コードレビュー・コミットという開発パイプラインを定める。
 
-## Feature Implementation Workflow
+## フィーチャー実装ワークフロー
 
-1. **Plan First**
-   - Use **planner** agent to create implementation plan
-   - Identify dependencies and risks
-   - Break down into phases
+1. **計画（Plan First）**
+   - **ko.planner** エージェントを使って実装計画を作成する
+   - 依存関係とリスクを洗い出す
+   - フェーズに分割して整理する
 
-2. **TDD Approach**
-   - Use **tdd-guide** agent
-   - Write tests first (RED)
-   - Implement to pass tests (GREEN)
-   - Refactor (IMPROVE)
-   - Verify 80%+ coverage
+2. **TDD（テスト駆動開発）**
+   - **ko.tdd-guide** エージェントを使用する
+   - まずテストを書く（RED）
+   - テストが通るように実装する（GREEN）
+   - リファクタリングする（IMPROVE）
+   - カバレッジ 80% 以上を確認する
 
-3. **Code Review**
-   - Use **code-reviewer** agent immediately after writing code
-   - Address CRITICAL and HIGH issues
-   - Fix MEDIUM issues when possible
+3. **コードレビュー**
+   - コードを書いたら即座に **ko.code-reviewer** エージェントを使用する
+   - CRITICAL・HIGH の指摘は必ず対応する
+   - MEDIUM の指摘は可能な範囲で対応する
 
-4. **Commit & Push**
-   - Detailed commit messages
-   - Follow conventional commits format
-   - See the git workflow rule for commit message format and PR process
+4. **コミット & プッシュ**
+   - コミットメッセージは詳細に記述する
+   - Conventional Commits 形式に従う
+   - コミットメッセージの形式と PR プロセスは git ワークフロールールを参照
