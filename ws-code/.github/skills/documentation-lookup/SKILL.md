@@ -1,4 +1,3 @@
-
 ---
 name: documentation-lookup
 description: 学習データではなく Context7 MCP を使って最新のライブラリ・フレームワークのドキュメントを取得する。セットアップの質問・APIリファレンス・コード例、またはフレームワーク名（React、Next.js、Prisma など）が言及された際に起動する。
