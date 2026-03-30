@@ -6,7 +6,7 @@ alwaysApply: true
 
 ## 利用可能なエージェント
 
-`~/.claude/agents/my_agents/` に配置:
+`~/.cursor/agents/my_agents/` に配置:
 
 | エージェント | 目的 | 使用タイミング |
 |-------------|------|--------------|

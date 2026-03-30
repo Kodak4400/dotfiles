@@ -1,0 +1,3 @@
+- 必ずInstructions（ `~/.github/instructions/` ）の内容に従って作業してください
+- Agentsは `~/.github/agents/` にあります
+- 回答は必ず日本語でしてください
