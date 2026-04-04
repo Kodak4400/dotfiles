@@ -23,9 +23,9 @@ stow -d ~/dotfiles -t . wezterm
 # 6. IDE
 ## Visual Studio Code
 cd ${Workspace}
-stow -d ~/dotfiles -t . ws-code
+stow --no-folding -d ~/dotfiles -t . ws-code
 ## Cursor
 cd ${Workspace}
-stow -d ~/dotfiles -t . ws-cursor
+stow --no-folding -d ~/dotfiles -t . ws-cursor
 ```
 
