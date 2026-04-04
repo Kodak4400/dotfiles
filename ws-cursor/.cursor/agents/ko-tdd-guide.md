@@ -1,6 +1,5 @@
 ---
-tools: ["Read", "Write", "Edit", "Bash", "Grep"]
-name: tdd-guide
+name: ko-tdd-guide
 model: claude-4.6-sonnet-medium
 description: テスト駆動開発（TDD）の専門エージェント。テストファーストの手法を徹底する。新機能の追加・バグ修正・リファクタリング時に積極的に使用する。カバレッジ80%以上を保証する。
 ---

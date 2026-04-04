@@ -1,6 +1,6 @@
 ---
-tools: ["Read", "Grep", "Glob", "Bash"]
-name: code-reviewer
+
+name: ko-code-reviewer
 model: claude-4.6-sonnet-medium
 description: コードレビューの専門エージェント。品質・セキュリティ・保守性の観点からコードを積極的にレビューする。コードを書いた・修正した直後に必ず使用すること。
 ---

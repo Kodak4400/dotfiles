@@ -1,5 +1,6 @@
 ---
 description: "Git ワークフロー: Conventional Commits、PRプロセス"
+globs: *
 alwaysApply: true
 ---
 # Git ワークフロー

@@ -26,6 +26,9 @@ cd ${Workspace}
 stow --no-folding -d ~/dotfiles -t . ws-code
 ## Cursor
 cd ${Workspace}
-stow --no-folding -d ~/dotfiles -t . ws-cursor
+~/dotfiles/scripts/setup-cursor-project.sh
+# ※ Cursor は Subagents をファイル単位のシンボリックリンクで認識しないため、
+#    agents ディレクトリのみフォルダごとシンボリックリンクにする必要がある。
+#    このスクリプトがその差異を吸収する。
 ```
 

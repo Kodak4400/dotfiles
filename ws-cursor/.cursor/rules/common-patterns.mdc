@@ -1,5 +1,6 @@
 ---
 description: "共通パターン: リポジトリ、APIレスポンス、スケルトンプロジェクト"
+globs: *
 alwaysApply: true
 ---
 # 共通パターン

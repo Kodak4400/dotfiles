@@ -1,6 +1,5 @@
 ---
-tools: ["Read", "Grep", "Glob"]
-name: planner
+name: ko-planner
 model: claude-4.6-sonnet-medium
 description: 複雑な機能追加やリファクタリングに特化した計画立案の専門エージェント。機能実装・アーキテクチャ変更・複雑なリファクタリングの依頼があった際は積極的に使用する。計画タスクで自動的に起動される。
 ---

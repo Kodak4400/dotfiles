@@ -1,6 +1,5 @@
 ---
-tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
-name: security-reviewer
+name: ko-security-reviewer
 model: claude-4.6-sonnet-medium
 description: セキュリティ脆弱性の検出と修正の専門エージェント。ユーザー入力・認証・APIエンドポイント・機密データを扱うコードを書いた後に積極的に使用する。シークレット・SSRF・インジェクション・安全でない暗号化・OWASP Top 10の脆弱性を検出する。
 ---
