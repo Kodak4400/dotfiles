@@ -17,23 +17,29 @@ echo "Setting up Cursor project dotfiles..."
 echo "  dotfiles: $DOTFILES_DIR"
 echo "  target:   $TARGET"
 
-# rules / skills をファイル単位のシンボリックリンクで展開（agentsは除外）
-stow --no-folding --ignore='agents' -d "$DOTFILES_DIR" -t "$TARGET" ws-cursor
+# rules / skills をファイル単位のシンボリックリンクで展開（agents・hooks は除外）
+stow --no-folding --ignore='agents' --ignore='hooks' -d "$DOTFILES_DIR" -t "$TARGET" ws-cursor
 
-# agents はフォルダごとシンボリックリンクにする
+# agents / hooks はフォルダごとシンボリックリンクにする
 # （Cursor はファイル単位のシンボリックリンクを Subagent として認識しないため）
-AGENTS_LINK="$TARGET/.cursor/agents"
-AGENTS_SRC="$DOTFILES_DIR/ws-cursor/.cursor/agents"
+symlink_dir() {
+  local link="$1"
+  local src="$2"
+  local label="$3"
 
-if [ -L "$AGENTS_LINK" ]; then
-  echo "agents symlink already exists, skipping."
-elif [ -d "$AGENTS_LINK" ]; then
-  rm -rf "$AGENTS_LINK"
-  ln -s "$AGENTS_SRC" "$AGENTS_LINK"
-  echo "Replaced agents directory with folder symlink."
-else
-  ln -s "$AGENTS_SRC" "$AGENTS_LINK"
-  echo "Created agents folder symlink."
-fi
+  if [ -L "$link" ]; then
+    echo "$label symlink already exists, skipping."
+  elif [ -d "$link" ]; then
+    rm -rf "$link"
+    ln -s "$src" "$link"
+    echo "Replaced $label directory with folder symlink."
+  else
+    ln -s "$src" "$link"
+    echo "Created $label folder symlink."
+  fi
+}
+
+symlink_dir "$TARGET/.cursor/agents" "$DOTFILES_DIR/ws-cursor/.cursor/agents" "agents"
+symlink_dir "$TARGET/.cursor/hooks"  "$DOTFILES_DIR/ws-cursor/.cursor/hooks"  "hooks"
 
 echo "Done."
