@@ -1,3 +1,8 @@
+---
+description: "エージェント指示書"
+globs: *
+alwaysApply: true
+---
 # エージェント指示書
 
 ## コア原則
