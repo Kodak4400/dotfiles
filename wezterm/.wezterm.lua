@@ -12,6 +12,16 @@ config.keys = {
         key = "d",
         action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
     },
+    {
+        mods = "CTRL",
+        key = "PageDown",
+        action = wezterm.action.ActivateTabRelative(1),
+    },
+    {
+        mods = "CTRL",
+        key = "PageUp",
+        action = wezterm.action.ActivateTabRelative(-1),
+    },
 }
 
 return config
