@@ -41,5 +41,6 @@ symlink_dir() {
 
 symlink_dir "$TARGET/.cursor/agents" "$DOTFILES_DIR/ws-cursor/.cursor/agents" "agents"
 symlink_dir "$TARGET/.cursor/hooks"  "$DOTFILES_DIR/ws-cursor/.cursor/hooks"  "hooks"
+symlink_dir "$TARGET/.cursor/scripts"  "$DOTFILES_DIR/ws-cursor/.cursor/scripts"  "scripts"
 
 echo "Done."

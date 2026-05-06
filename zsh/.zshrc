@@ -57,6 +57,8 @@ alias ls='eza'
 alias ll='eza -l'
 alias grep='rg'
 alias cat='bat'
+alias vim='nvim'
+
 
 # Kiro CLI post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh"

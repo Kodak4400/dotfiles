@@ -1,8 +1,8 @@
 ---
 description: "コーディングスタイル: イミュータビリティ、ファイル構成、エラー処理、バリデーション"
-globs: *
 alwaysApply: true
 ---
+
 # コーディングスタイル
 
 ## イミュータビリティ（重要）
@@ -11,7 +11,7 @@ alwaysApply: true
 
 ```
 // 擬似コード
-NG:  modify(original, field, value) → originalを直接変更する
+NG: modify(original, field, value) → originalを直接変更する
 OK: update(original, field, value) → 変更を加えた新しいコピーを返す
 ```
 

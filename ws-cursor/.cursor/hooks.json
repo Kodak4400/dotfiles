@@ -1,66 +1,20 @@
 {
   "version": 1,
   "hooks": {
+    "preToolUse": [
+      {
+        "matcher": "Bash",
+        "type": "command",
+        "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/validate-bash.sh",
+        "timeout": 10
+      }
+    ],
     "beforeSubmitPrompt": [
       {
-        "command": "node ~/.cursor/hooks/hook-handler.js"
-      }
-    ],
-    "afterAgentResponse": [
-      {
-        "command": "node ~/.cursor/hooks/hook-handler.js"
-      }
-    ],
-    "afterAgentThought": [
-      {
-        "command": "node ~/.cursor/hooks/hook-handler.js"
-      }
-    ],
-    "beforeShellExecution": [
-      {
-        "command": "node ~/.cursor/hooks/hook-handler.js"
-      }
-    ],
-    "afterShellExecution": [
-      {
-        "command": "node ~/.cursor/hooks/hook-handler.js"
-      }
-    ],
-    "beforeMCPExecution": [
-      {
-        "command": "node ~/.cursor/hooks/hook-handler.js"
-      }
-    ],
-    "afterMCPExecution": [
-      {
-        "command": "node ~/.cursor/hooks/hook-handler.js"
-      }
-    ],
-    "beforeReadFile": [
-      {
-        "command": "node ~/.cursor/hooks/hook-handler.js"
-      }
-    ],
-    "afterFileEdit": [
-      {
-        "command": "node ~/.cursor/hooks/hook-handler.js"
-      }
-    ],
-    "stop": [
-      {
-        "command": "node ~/.cursor/hooks/hook-handler.js"
-      }
-    ],
-    "beforeTabFileRead": [
-      {
-        "command": "node ~/.cursor/hooks/hook-handler.js"
-      }
-    ],
-    "afterTabFileEdit": [
-      {
-        "command": "node ~/.cursor/hooks/hook-handler.js"
+        "matcher": "*",
+        "type": "prompt",
+        "prompt": "以下のユーザープロンプトに、API キー(sk-/Bearer/AKIA*/ghp_*/xoxb-)、パスワード、マイナンバー(12桁連続数字)、クレジットカード番号(13-19桁連続数字)、または AWS/GCP/Azure のアクセスキーが平文で含まれているかを検査してください。\n\n- 含まれている場合: 先頭に `[WARN] 機密情報が含まれる可能性があります:` と記し、どの種別が含まれるかを1行で示し、「続行する前に値を環境変数や .env に置き換えることを検討してください」と助言するメッセージのみを出力してください。\n- 含まれていない場合: 何も出力せずに終了してください。\n\n判断は保守的に。URL中のトークン風文字列や、CI/IaC 変数参照(${VAR}, $VAR, {{ secret }} など)は機密情報ではないので無視してください。"
       }
     ]
   }
 }
-
