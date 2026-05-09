@@ -1,0 +1,15 @@
+{
+  "networkPolicy": {
+    "default": "deny",
+    "allow": [
+      "dev.classmethod.jp",
+      "docs.aws.amazon.com",
+      "code.claude.com",
+      "api.github.com",
+      "www.googleapis.com",
+      "*.amazonaws.com",
+      "*.docker.io",
+      "*.docker.com"
+    ]
+  }
+}

@@ -18,7 +18,7 @@ echo "  dotfiles: $DOTFILES_DIR"
 echo "  target:   $TARGET"
 
 # rules / skills をファイル単位のシンボリックリンクで展開（agents・hooks は除外）
-stow --no-folding --ignore='agents' --ignore='hooks' -d "$DOTFILES_DIR" -t "$TARGET" ws-cursor
+stow --no-folding --ignore='agents' --ignore='hooks' --ignore='scripts' -d "$DOTFILES_DIR" -t "$TARGET" ws-cursor
 
 # agents / hooks はフォルダごとシンボリックリンクにする
 # （Cursor はファイル単位のシンボリックリンクを Subagent として認識しないため）
