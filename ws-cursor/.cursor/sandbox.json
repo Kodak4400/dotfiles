@@ -11,5 +11,9 @@
       "*.docker.io",
       "*.docker.com"
     ]
-  }
+  },
+  "additionalReadwritePaths": [
+    "~/.aws/cli/cache",
+    "~/.aws/sso/cache"
+  ]
 }
