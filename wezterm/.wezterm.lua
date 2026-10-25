@@ -4,6 +4,10 @@ local config = wezterm.config_builder()
 config.automatically_reload_config = true
 config.initial_cols = 200
 config.initial_rows = 50
+config.font = wezterm.font_with_fallback({
+    { family = 'JetBrains Mono', weight = 'Bold' },
+    'Hiragino Sans',
+})
 config.font_size = 14.0
 config.use_ime = true
 -- config.color_scheme = 'Tokyo Night Light (Gogh)'

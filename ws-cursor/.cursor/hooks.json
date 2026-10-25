@@ -1,6 +1,13 @@
 {
   "version": 1,
   "hooks": {
+    "stop": [
+      {
+        "type": "command",
+        "command": "bash ~/.cursor/plugins/local/cursor-cost-report/hooks/emit-usage.sh",
+        "failClosed": false
+      }
+    ],
     "preToolUse": [
       {
         "matcher": "Bash",

@@ -13,14 +13,15 @@ brew install eza
 brew install bat
 
 # 4. Install ripgrep https://github.com/BurntSushi/ripgrep
-brew install ripgrep
+# 5. Install fzf https://github.com/junegunn/fzf
+brew install fzf ripgrep
 
-# 5. Setup dotfiles (zsh & wezterm)
+# 6. Setup dotfiles (zsh & wezterm)
 cd $HOME
 stow -d ~/dotfiles -t . zsh
 stow -d ~/dotfiles -t . wezterm
 
-# 6. IDE
+# 7. IDE
 ## Visual Studio Code
 cd ${Workspace}
 stow --no-folding -d ~/dotfiles -t . ws-code
@@ -30,5 +31,9 @@ cd ${Workspace}
 # ※ Cursor は Subagents をファイル単位のシンボリックリンクで認識しないため、
 #    agents ディレクトリのみフォルダごとシンボリックリンクにする必要がある。
 #    このスクリプトがその差異を吸収する。
+
+#8. NeoVim
+brew install neovim
+stow --no-folding -d ~/dotfiles -t . neovim
 ```
 

@@ -59,6 +59,21 @@ alias grep='rg'
 alias cat='bat'
 alias vim='nvim'
 
+# Start Obsidian (Claude Code)
+function start_memo() {
+    # 1. 移動したいディレクトリを変数にセット
+    TARGET_DIR="/Users/t-toda/00_work/00_profile/01_LLMWiki/raw/inbox"
+    
+    # 2. 現在のペイン（左側として残る画面）をディレクトリ移動
+    cd "$TARGET_DIR" || return
+
+    # 3. 「右側」に新しいペインを作成し、そのペインIDを取得
+    PANE_ID=$(/Applications/WezTerm.app/Contents/MacOS/wezterm cli split-pane --right --cwd "$TARGET_DIR")
+
+    # 4. 新しくできた「右側の画面」で claude コマンドを実行
+    /Applications/WezTerm.app/Contents/MacOS/wezterm cli send-text --pane-id $PANE_ID "claude"$'\n'
+}
+
 
 # Kiro CLI post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh"
